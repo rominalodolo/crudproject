@@ -21,7 +21,11 @@ class UserForm extends Component {
       <div>
         <h1>{this.title}</h1>
         <Formik
-          initialValues={{ username: "", email: "" }}
+          enableReinitialize={true}
+          initialValues={{
+            username: this.state.username,
+            email: this.state.email,
+          }}
           validate={(values) => {
             let errors = {};
             if (!values.email) {
@@ -43,14 +47,25 @@ class UserForm extends Component {
           onSubmit={(values, { setSubmitting }) => {
             setTimeout(() => {
               // actual submit logic...
-              firebase
-                .database()
-                .ref("/")
-                .push({
-                  username: values.username,
-                  email: values.email,
-                })
-                .then(() => this.props.history.push("/"));
+              if (this.id) {
+                firebase
+                  .database()
+                  .ref("/" + this.id)
+                  .update({
+                    username: values.username,
+                    email: values.email,
+                  })
+                  .then(() => this.props.history.push("/"));
+              } else {
+                firebase
+                  .database()
+                  .ref("/")
+                  .push({
+                    username: values.username,
+                    email: values.email,
+                  })
+                  .then(() => this.props.history.push("/"));
+              }
 
               setSubmitting(false);
             }, 400);

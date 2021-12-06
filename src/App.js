@@ -1,17 +1,13 @@
-import "./App.css";
-import * as firebase from "firebase";
+import React, { Component } from "react";
 import User from "./User";
 import UserForm from "./UserForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Component } from "react";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
-  constructor() {
-    super();
-    console.log(firebase);
-  }
+
   render() {
+
     return (
       <div>
         <BrowserRouter>
@@ -28,6 +24,7 @@ class App extends Component {
     );
   }
 }
+
 export default App;
 
 class NotFound extends Component {
@@ -35,4 +32,3 @@ class NotFound extends Component {
     return <div>Not Found</div>;
   }
 }
-
