@@ -17,6 +17,8 @@ React, ReactDOM
 `npm install react react-dom`
 Bootstrap 
 `npm install --save react-bootstrap bootstrap`
+Formik
+`npm i formik`
 
 
 ## Link 
