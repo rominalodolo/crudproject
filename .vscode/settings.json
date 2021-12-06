@@ -4,5 +4,9 @@
         "crudbeginningreact",
         "firebaseapp",
         "Formik"
+    ],
+    "cSpell.ignoreWords": [
+        "browserslist",
+        "crudproject"
     ]
 }

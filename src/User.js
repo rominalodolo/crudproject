@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import * as firebase from "firebase";
 import { Table, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+// import { initializeApp } from "@firebase/app";
+// import { getAuth, GoogleAuthProvider } from "@firebase/auth";
 
 class User extends Component {
   constructor(props) {
