@@ -15,6 +15,8 @@ From the Beginning React Book by Greg Lim, 2017.
 Other adds:
 React, ReactDOM
 `npm install react react-dom`
+Bootstrap 
+`npm install --save react-bootstrap bootstrap`
 
 
 ## Link 
