@@ -9,8 +9,13 @@ From the Beginning React Book by Greg Lim, 2017.
 ### Getting started on Firebase:
 `firebase.google.com`
 `<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>`
-`npm install firebase --save` 
+`npm install firebase --save` OR `npm install firebase`
 `import * as firebase from 'firebase';`
+
+Other adds:
+React, ReactDOM
+`npm install react react-dom`
+
 
 ## Link 
 `https://crudbeginningreact-default-rtdb.firebaseio.com/` 

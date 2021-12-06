@@ -5,17 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as firebase from 'firebase';
 
+
 var config = {
-  apiKey: "AIzaSyBN9WlmRc3SedmC4agM1G-rYqezGR22iZE",
-  authDomain: "crudproject-45834.firebase app.com",
-  databaseURL: "https://crudproject-45834.firebaseio.com",
-  projectId: "crudproject-45834",
-  storageBucket: "crudproject-45834.appspot.com",
-  messagingSenderId: "590481645308"
-  appId: “…”
+  apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
+  authDomain: "crudbeginningreact.firebaseapp.com",
+  databaseURL: "https://crudbeginningreact-default-rtdb.firebaseio.com",
+  projectId: "crudbeginningreact",
+  storageBucket: "crudbeginningreact.appspot.com",
+  messagingSenderId: "536739765095",
+  appId: "1:536739765095:web:1f1a2b5128492fe9b8adc2",
+  measurementId: "G-FCSG8N2B79"
 };
 
 firebase.initializeApp(config);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
