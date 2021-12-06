@@ -12,3 +12,5 @@ From the Beginning React Book by Greg Lim, 2017.
 `npm install firebase --save` 
 `import * as firebase from 'firebase';`
 
+
+Last edit December 2021
