@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
+
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 
 
-var config = {
+const firebaseConfig = {  
   apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
   authDomain: "crudbeginningreact.firebaseapp.com",
   databaseURL: "https://crudbeginningreact-default-rtdb.firebaseio.com",
@@ -17,7 +20,10 @@ var config = {
   measurementId: "G-FCSG8N2B79"
 };
 
-firebase.initializeApp(config);
+const app = initializeApp(firebaseConfig);
+// const analytics= getAnalytics(app);
+
+// firebase.initializeApp(config);
 
 ReactDOM.render(
   <React.StrictMode>

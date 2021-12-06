@@ -1,8 +1,10 @@
 import "./App.css";
 import * as firebase from "firebase";
 import User from "./User";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import UserForm from "./UserForm";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { Component } from "react";
+
 
 class App extends Component {
   constructor() {
@@ -14,10 +16,12 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <Switch>
+            <Routes>
+              <Route path="/edit/:id" component={UserForm} />
+              <Route path="/add" component={UserForm} />
               <Route exact path="/" component={User} />
               <Route path="/*" component={NotFound} />
-            </Switch>
+            </Routes>
           </div>
         </BrowserRouter>
       </div>
@@ -26,13 +30,9 @@ class App extends Component {
 }
 export default App;
 
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
 class NotFound extends Component {
   render() {
     return <div>Not Found</div>;
   }
 }
+
