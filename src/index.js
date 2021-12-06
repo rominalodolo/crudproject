@@ -5,9 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as firebase from "firebase";
 
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-
 var config = {
   apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
   authDomain: "crudbeginningreact.firebaseapp.com",
@@ -19,15 +16,7 @@ var config = {
   measurementId: "G-FCSG8N2B79",
 };
 
-// const app = initializeApp(firebaseConfig);
-// const analytics= getAnalytics(app);
-
 firebase.initializeApp(config);
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 
 reportWebVitals();
