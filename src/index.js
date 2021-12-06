@@ -3,13 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-//import * as firebase from 'firebase';
+import * as firebase from "firebase";
 
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
-
-const firebaseConfig = {  
+var config = {
   apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
   authDomain: "crudbeginningreact.firebaseapp.com",
   databaseURL: "https://crudbeginningreact-default-rtdb.firebaseio.com",
@@ -17,14 +16,13 @@ const firebaseConfig = {
   storageBucket: "crudbeginningreact.appspot.com",
   messagingSenderId: "536739765095",
   appId: "1:536739765095:web:1f1a2b5128492fe9b8adc2",
-  measurementId: "G-FCSG8N2B79"
+  measurementId: "G-FCSG8N2B79",
 };
 
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
 // const analytics= getAnalytics(app);
 
-// firebase.initializeApp(config);
-
+firebase.initializeApp(config);
 ReactDOM.render(
   <React.StrictMode>
     <App />
