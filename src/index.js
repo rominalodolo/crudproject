@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import firebase from "firebase";
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
@@ -16,7 +16,7 @@ const firebaseConfig = {
   measurementId: "G-FCSG8N2B79"
 };
 
-firebase.initializeApp(config);
+const app = initializeApp(firebaseConfig);
 ReactDOM.render(<App />, document.getElementById("root"));
 
 reportWebVitals();
@@ -29,6 +29,5 @@ import { getAnalytics } from "firebase/analytics";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+
 const analytics = getAnalytics(app);
