@@ -1,13 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import * as firebase from "firebase/app";
-// import { initializeApp } from "firebase/app";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+// import * as serviceWorker from './serviceWorker';
+import firebase from 'firebase/compat/app';
 
-
-const firebaseConfig = {
+var config = {
   apiKey: "AIzaSyAH4CjXrXm51t8ZeaKUfAB1XYPpFxKpzOo",
   authDomain: "crudbeginningreact.firebaseapp.com",
   databaseURL: "https://crudbeginningreact-default-rtdb.firebaseio.com",
@@ -16,19 +14,12 @@ const firebaseConfig = {
   messagingSenderId: "536739765095",
   appId: "1:536739765095:web:1f1a2b5128492fe9b8adc2",
   measurementId: "G-FCSG8N2B79"
-};
+  };
 
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(config);
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById("root"));
-
-reportWebVitals();
-
-
-// import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-
-
-// const analytics = getAnalytics(app);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+// serviceWorker.unregister();

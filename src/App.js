@@ -1,27 +1,25 @@
-import React, { Component } from "react";
-import User from "./User";
-import UserForm from "./UserForm";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { Component } from 'react';
+import User from './User';
+import UserForm from './UserForm';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-class App extends Component {
-
+class App extends Component {  
 
   render() {
-
     return (
       <div>
-        <BrowserRouter>
-          <div>
-            <Routes>
-              <Route path="/edit/:id" component={UserForm} />
-              <Route path="/add" component={UserForm} />
-              <Route exact path="/" component={User} />
-              <Route path="/*" component={NotFound} />
-            </Routes>
-          </div>
-        </BrowserRouter>
+          <BrowserRouter>
+          <div>                            
+            <Routes>   
+              <Route path="/edit/:id" component={UserForm} />               
+              <Route path="/add" component={UserForm} />                       
+              <Route exact path="/" component={User} />             
+              <Route path="/*" component={NotFound} />                       
+            </Routes>   
+          </div>  
+        </BrowserRouter>               
       </div>
     );
   }
@@ -30,7 +28,7 @@ class App extends Component {
 export default App;
 
 class NotFound extends Component {
-  render() {
-    return <div>Not Found</div>;
+  render(){
+    return <div>Not Found</div>
   }
 }

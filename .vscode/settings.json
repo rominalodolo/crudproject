@@ -3,6 +3,7 @@
         "appspot",
         "crudbeginningreact",
         "firebaseapp",
+        "Firestore",
         "Formik"
     ],
     "cSpell.ignoreWords": [
